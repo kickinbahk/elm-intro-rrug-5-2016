@@ -31,11 +31,41 @@
 	 				</p>
 				</section>
 				<!-- Syntax -->
-				<section data-markdown>
-					## Comments
-				</section>
-				<section data-markdown>
-					## Strings
+				<section>
+					<section>
+						<h3>Comments</h3>
+						<pre><code class="elm">
+			 -- a single line comment
+
+			 {- a multiline comment
+			  {- can be nested -}
+			 -}
+						</code></pre>
+					</section>
+					<section>
+					<h3>Literals</h3>
+					<pre><code class="elm">
+			-- Boolean
+			True  : Bool
+			False : Bool
+
+			-- Int or Float depending on usage
+			42    : number
+			3.14  : Float
+
+			'a'   : Char
+			"abc" : String
+
+			-- multi-line String
+			"""
+			This is useful for holding JSON or other
+			content that has "quotation marks".
+			"""
+				 </code></pre>
+			 </section>
+					<section data-markdown>
+						## Conditionals
+					</section>
 				</section>
         <!-- Elm Architecture -->
         <!-- Why Elm -->
