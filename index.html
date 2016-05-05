@@ -30,6 +30,21 @@
 						<a href="http://kickinbahk.com">Josiah Mory</a> / <a href="http://twitter.com/kickinbahk">@kickinbahk</a>
 	 				</p>
 				</section>
+				<section data-markdown>
+					## What is Elm?
+					Elm is a programming language that compiles to HTML5: HTML, CSS and
+					JavaScript and used to build web apps.
+				</section>
+				<section data-markdown>
+					### Similar to CoffeeScript or Typescript it Compiles to Javascript
+				</section>
+				<section data-markdown>
+					### Elm doesn’t replicate or try to mend the intricacies of JavaScript.
+				</section>
+				<section data-markdown>
+					### Elm is a language and ecosystem of its own, and it just happens to compile to JavaScript.
+				</section>
+
 				<!-- Syntax -->
 				<section>
 					<section>
@@ -42,9 +57,9 @@
 			 -}
 						</code></pre>
 					</section>
-					<section>
-					<h3>Literals</h3>
-					<pre><code class="elm">
+			  	<section>
+						<h3>Literals</h3>
+						<pre><code class="elm">
 			-- Boolean
 			True  : Bool
 			False : Bool
@@ -61,20 +76,75 @@
 			This is useful for holding JSON or other
 			content that has "quotation marks".
 			"""
-				 </code></pre>
-			 </section>
-					<section data-markdown>
-						## Conditionals
+				  	</code></pre>
+			 		</section>
+					<section>
+						<h3>Lists</h3>
+						<pre><code class="elm">
+				[1..4]
+				[1,2,3,4]
+				1 :: [2,3,4]
+				1 :: 2 :: 3 :: 4 :: []
+						</code></pre>
 					</section>
+					<section>
+						<h3>Conditionals</h3>
+						<pre><code class="elm">
+if powerLevel > 9000 then "OVER 9000!!!" else "meh"
+
+-- OR
+
+if key == 40 then
+    n + 1
+
+else if key == 38 then
+    n - 1
+
+else
+    n
+				  	</code></pre>
+			 		</section>
+					<section>
+						<h3>Functions</h3>
+						<pre><code class="elm">
+		sayHello name = String.append "Hello " name
+		-- function : String -> String
+
+		sayHello name = \
+		  String.append "Hello " name
+		-- function : String -> String
+				  	</code></pre>
+			 		</section>
 				</section>
         <!-- Elm Architecture -->
+				<section>
+					<section data-markdown>
+						## Model
+					</section>
+					<section data-markdown>
+						## Update
+					</section>
+					<section data-markdown>
+						## View
+					</section>
+				</section>
         <!-- Why Elm -->
-				<section data-markdown>
-					#### Creator Inspired by the Kubler-Ross model
-					<!-- Image of Model -->
+				<section>
+					<section data-markdown>
+						#### Creator Inspired by the Kubler-Ross model
+						<!-- Image of Model -->
+					</section>
+					<section data-markdown>
+						#### The refactoring experience most of the time is:
+
+						1. Make changes, any changes.
+						2. The compiler tells what you missed.
+						3. Go to 1.
+
+					</section>
 				</section>
 
-				<section>Slide 2</section>
+
 			</div>
 		</div>
 
