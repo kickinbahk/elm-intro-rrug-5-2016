@@ -32,12 +32,15 @@
 	 				</p>
 				</section>
 				<section data-markdown>
-					## What is Elm?
-					Elm is a programming language that compiles to HTML5: HTML, CSS and
-					JavaScript and used to build web apps.
+					# What is Elm?
 				</section>
 				<section data-markdown>
-					### Similar to CoffeeScript or Typescript it Compiles to Javascript
+					### Elm is a programming language
+					#### -
+					### It compiles to HTML5: HTML, CSS and JavaScript and used to build web apps.
+				</section>
+				<section data-markdown>
+					### Similar to CoffeeScript or TypeScript, Elm Compiles to Javascript
 				</section>
 				<section data-markdown>
 					### Elm doesn’t replicate or try to mend the intricacies of JavaScript.
@@ -49,13 +52,16 @@
 					![Evan-Czaplicki](images/Evan-Czaplicki.jpeg)
 					### Evan Czaplicki - Creator of Elm
 				</section>
-				<section data-markdown>
-					#### Creator Inspired by the Kubler-Ross model
-					![Kubler-Ross Model](images/Grief-Counseling.jpg)
+				<section >
+					<h3>Inspired by the Kubler-Ross model</h3>
+					<img src="images/Grief-Counseling.jpg" class="fragment fade-down"/>
 				</section>
 
 				<!-- Syntax -->
 				<section>
+					<section data-markdown>
+						# Syntax
+					</section>
 					<section>
 						<h3>Comments</h3>
 						<pre><code class="elm">
@@ -90,27 +96,27 @@
 					<section>
 						<h3>Lists</h3>
 						<pre><code class="elm">
-				[1..4]
-				[1,2,3,4]
-				1 :: [2,3,4]
-				1 :: 2 :: 3 :: 4 :: []
+			[1..4]
+			[1,2,3,4]
+			1 :: [2,3,4]
+			1 :: 2 :: 3 :: 4 :: []
 						</code></pre>
 					</section>
 					<section>
 						<h3>Conditionals</h3>
 						<pre><code class="elm">
-if powerLevel > 9000 then "OVER 9000!!!" else "meh"
+		if powerLevel > 9000 then "OVER 9000!!!" else "meh"
 
--- OR
+		-- OR
 
-if key == 40 then
-    n + 1
+		if key == 40 then
+		    n + 1
 
-else if key == 38 then
-    n - 1
+		else if key == 38 then
+		    n - 1
 
-else
-    n
+		else
+		    n
 				  	</code></pre>
 			 		</section>
 					<section>
@@ -128,50 +134,97 @@ else
         <!-- Elm Architecture -->
 				<section>
 					<section data-markdown>
-						## Model
+						![Wood Art](/images/arch.jpeg)
+						## Elm Architecture
 					</section>
-					<section data-markdown>
-						## Update
+					<section>
+						<h3>Model</h3>
+						<pre><code class="elm">
+			type alias Model = { ... }
+						</code></pre>
 					</section>
-					<section data-markdown>
-						## View
+					<section>
+						<h3>Update</h3>
+						<pre><code class="elm">
+			type Action = Reset | ...
+
+			update : Action -> Model -> Model
+			update action model =
+			  case action of
+			    Reset -> ...
+			    ...
+						</code></pre>
+					</section>
+					<section>
+						<h3>View</h3>
+						<pre><code class="elm">
+			view : Model -> Html
+			view =
+			  ...
+						</code></pre>
 					</section>
 				</section>
         <!-- Why Elm -->
 				<section>
 					<section data-markdown>
-						### General refactoring experience is:
+						# Why Elm?
+					</section>
+					<section data-markdown>
+						## 1. Functional Reactive Programming
+					</section>
+					<section data-markdown>
+						### Functional
+						- Functions are First Class
+						- Pure Functions - always return the same value given the same arguments
+					</section>
+					<section data-markdown>
+						### Pure functions
+						### -
+						always return the same value given the same arguments, with no side-effects.
+						###### In essence, the function must not depend on anything else besides the arguments, and it must not mutate anything.
+					</section>
+					<section data-markdown>
+						### Reactive
+						something that a component can start listening for, and react to the events as it pleases
+						##### In Elm, these listenable things are signals. The component using a signal knows how to utilize it, but the signal has no knowledge of the component(s) that it is affecting.
+					</section>
+					<section data-markdown>
+						## 2. General refactoring experience is:
 						1. Make changes, any changes.
 						2. The compiler tells what you missed.
 						3. Go to 1.
 					</section>
 					<section data-markdown>
-						### Strong static types
+						## 3. Strong static types
 						Find errors fast with readable compiler messages.
 					</section>
 					<section data-markdown>
-						### No `null` or `undefined`
+						## 4. No `null` or `undefined`
 						Never miss a potential problem.
 					</section>
 					<section data-markdown>
-						### Total immutability
+						## 5. Total immutability
 						Focus on what you are writing right now without worrying about outer state.
 					</section>
 					<section data-markdown>
-						### Purely functional
+						## 6. Purely functional
 						Leads to decoupled and easily refactorable code.
 					</section>
 					<section data-markdown>
-						### No runtime exceptions
+						## 7. No runtime exceptions
 						Gives incomparable reliability.
 					</section>
 					<section data-markdown>
-						### Reactive by design
+						## 8. Reactive by design
 						FRP isn’t opt-in, it is baked right in the language.
 					</section>
 				</section>
-
-
+				<!-- What I think of Elm -->
+				<section>
+					<section data-markdown>
+						### What I think of Elm
+					</section>
+				</section>
 			</div>
 		</div>
 
